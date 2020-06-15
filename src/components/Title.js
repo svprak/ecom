@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Title(props) {
+function Title({name, title}) {
   return (
     <div className="row">
       <div className="col-10 mx-auto my-2 text-title text-center">
         <h1 className="text-capitalize font-weight-bold">
-          {props.name}
-          <strong className="text-blue">{props.title}</strong>
+          {name}
+          <strong className="text-blue">{title}</strong>
         </h1>
       </div>
     </div>
