@@ -7,14 +7,18 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
+import { Switch, Route } from 'react-router-dom';
+
 function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <ProductList />
-      <Details />
-      <Cart />
-      <Default />
+      <Switch>
+        <Route path="/" exact={true} component={ProductList}></Route>
+        <Route path="/details" component={Details}></Route>
+        <Route path="/Cart" component={Cart}></Route>
+        <Route component={Default}></Route>
+      </Switch>
     </React.Fragment>
   );
 }
